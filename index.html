@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <header class="mb-10">
+    </header>
+    <main class="container mx-auto space-y-5">
+        <div class="w-[100%] bg-slate-700 p-14 ">
+            <input id="inpField" type="text" placeholder="Search..." class="input input-bordered w-full max-w-xs" />
+            <button onclick="handler()" class="btn btn-accent">Search</button>
+        </div>
+        <section id="loader" class="text-center py-10 hidden">
+            <span class="loading loading-spinner text-primary"></span>
+            <span class="loading loading-spinner text-secondary"></span>
+            <span class="loading loading-spinner text-accent"></span>
+            <span class="loading loading-spinner text-neutral"></span>
+            <span class="loading loading-spinner text-info"></span>
+            <span class="loading loading-spinner text-success"></span>
+        </section>
+        <div class="grid grid-cols-4 gap-10" id="cardHolder">
+        </div>
+        <div id="showAll" class="hidden text-center">
+            <button onclick="showAllBtn()" class="btn btn-accent">Show All</button>
+        </div>
+
+        <section>
+            <!-- Open the modal using ID.showModal() method -->
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box">
+                    <h3 id="modalPhoneName" class="text-lg font-bold"></h3>
+                    <p id="modalStorage" class="py-4"></p>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+        </section>
+    </main>
+    <script src="./js/phone.js"></script>
+</body>
+
+</html>
